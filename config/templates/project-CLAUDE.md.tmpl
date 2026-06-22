@@ -1,0 +1,35 @@
+# CLAUDE.md — <PROJECT_NAME>
+
+> Project-local guardrails. Cross-project, reusable gotchas live in the shared brain:
+> **`<BRAIN_RELATIVE_PATH>/INDEX.md`** — scan it first; open a `docs/<topic>.md` guide only when its one-line trigger matches the task.
+
+## What this project is
+
+<ONE_OR_TWO_LINES: the goal, the org alias, the surface. Fill on bootstrap.>
+
+## Build log (Context-Stack Layer 2 — keep it current, autonomously)
+
+This project has a `build-log.md` at its root: the append-only running narrative.
+**Maintain it yourself, without asking,** by appending a short timestamped bullet when ANY of these fire:
+- a phase / milestone completes, or a deploy goes green;
+- a non-obvious fix lands (something that took more than one try, or a surprise like an unexpected field name);
+- a decision or its reversal (chose X over Y, and why);
+- a blocker is hit (what's blocked, what's needed to unblock);
+- **immediately before running `/compact`** — write a `[next]` bullet capturing exactly where we are, so the post-compact session resumes cold.
+Rules: append-only, newest at the bottom, terse bullets with a `[tag]` (`[milestone]`/`[gotcha]`/`[decision]`/`[blocker]`/`[next]`). Do NOT rewrite history.
+Do NOT put live secrets/tokens here. If a logged gotcha is durable + teachable, flag it as a **`/capture`** candidate — the brain is the shared layer; this log is local.
+(Full pattern: brain `docs/build-log-pattern.md`.)
+
+## Git (Context-Stack Layer 1)
+
+This project is its own git repo. Commit with messages that explain **why**, not just what.
+At task/plan completion, offer to commit + push. Don't push secrets — see `.gitignore`.
+
+## Capturing durable learnings
+
+At the end of a plan or task, ask whether to run **`/capture`** so teachable gotchas land in the brain
+(`<BRAIN_RELATIVE_PATH>/docs/`), not buried in this project. Personal facts (org creds, status) stay local.
+
+## Conventions
+
+<PROJECT_SPECIFIC: API version, model/effort policy, naming, hard constraints. Fill as the project grows.>

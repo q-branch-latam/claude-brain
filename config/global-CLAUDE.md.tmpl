@@ -1,0 +1,37 @@
+# Global CLAUDE.md — loaded in every session, everywhere
+
+This file is intentionally tiny. It makes every new session aware of the "Context Stack" working
+procedure **without** loading its body — that lives in a knowledge base and is read on demand.
+
+## When this applies (gate first)
+
+Apply the Context-Stack procedure below **only** when the conversation involves
+**planning, file/code creation, or knowledge-gathering** — i.e. real project work.
+For throwaway Q&A, quick lookups, or one-off chats that create no artifacts,
+**ignore all of this** and just answer.
+
+## The Context Stack
+
+When doing project work, knowledge lives in four layers so I never re-explain myself:
+
+0. **Awareness** — this file.
+1. **Past** — `git` (per-project repo): the AI writes commit messages that explain *why*, not just *what*.
+2. **Present** — a project-root `build-log.md`: append-only running narrative the AI keeps **autonomously** (see the build-log guide for trigger rules). "Where we are + the dead ends."
+3. **Always-true** — the shared knowledge base ("the brain"):
+   > **`<BRAIN_PATH>`**
+   Durable, teachable, cross-project gotchas. **Read its `INDEX.md` first**; open a `docs/<topic>.md` guide only when its one-line trigger matches the task. Add learnings with **`/capture`** (proposes entries for approve/edit/reject, then commits with a why-rich message).
+
+## Two brains
+
+- The path above is the **team brain** (shared, public): read it for knowledge; copy guides you want into your own brain.
+- Your **personal brain** (private, yours) is where `/capture` saves YOUR learnings. Promote the best ones to the team with **`/capture-to-team`** (an Opus review gates it first).
+
+## Starting work in a project folder
+
+- If the project has a `CLAUDE.md`, follow it (it carries the build-log triggers + a brain pointer).
+- If it's a **new** project with no setup, run **`/bootstrap-project`** — it scaffolds `docs/`, seeds `build-log.md`, `git init`s (+ optional private GitHub repo), and writes a project `CLAUDE.md` from the brain's template.
+
+## Personal facts
+
+Your profile, org table, and per-project status are NOT in the brain (that's shared). Keep them in a
+local workspace `CLAUDE.md` and/or native memory. Keep durable + shareable gotchas in the brain.

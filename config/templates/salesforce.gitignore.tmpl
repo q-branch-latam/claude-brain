@@ -1,0 +1,60 @@
+# .gitignore template for a Salesforce / SFDX project repo.
+# Goal: commit source + docs + build-log; NEVER commit secrets, auth, large/binary noise.
+
+# --- Secrets / auth (NEVER commit) ---
+*.key
+*.pem
+*.p12
+.env
+.env.*
+**/frontdoor*.jsp*
+**/*otp=*
+*access_token*
+*refresh_token*
+.sf/
+.sfdx/
+**/.sf/
+**/.sfdx/
+authFiles/
+
+# --- SFDX / build noise ---
+*.log
+logs/
+.localdevserver/
+deploy-options.json
+.sfdx-data/
+
+# --- Claude/agent tooling caches (regenerable, not project work) ---
+.agents/
+skills-lock.json
+
+# --- Node / web (React_js, LWR, slides build) ---
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+*.tsbuildinfo
+.vercel/
+
+# --- Large / binary artifacts (keep repos lean; store elsewhere if needed) ---
+*.zip
+*.mov
+*.mp4
+*.psd
+*.sketch
+# Screenshots: comment the next line out if a project's screenshots are load-bearing docs
+docs/screenshots/
+**/screenshots/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# --- Scratch ---
+/tmp/
+scratch/
+tmp/
