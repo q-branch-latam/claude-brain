@@ -1,0 +1,16 @@
+{
+  "name": "q-branch-latam-story",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Q Branch LATAM — the shared brain: story page (single source of truth for the Context Stack process)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
