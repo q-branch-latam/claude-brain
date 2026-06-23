@@ -3,6 +3,10 @@
 A shared, version-controlled knowledge base so **Claude stops forgetting our hard-won lessons**
 between sessions — and so the whole team benefits from each other's learnings.
 
+> **📖 Start here → [the story page](https://q-branch-latam-brain-9942e218be1b.herokuapp.com/)** — the
+> single source of truth for the whole process (what the Context Stack is, why, and how to set yourself
+> up in 5 minutes). Built from `site/`.
+
 This is **Layer 3** of a four-layer "Context Stack" (Bera Aksoy's three-layer model + an awareness
 layer). The idea: durable, teachable gotchas live in topic-named `docs/*.md` guides, catalogued in a
 thin `INDEX.md`. Claude reads the index first and opens a guide **only when it's relevant** — so the

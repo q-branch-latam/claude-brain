@@ -1,7 +1,10 @@
 # Q Branch LATAM — story page
 
 The single source of truth for the Context Stack process: a scrollable story page presented at
-Tuesday AI sharing time and left up async. Static HTML, no build step. Self-contained — all fonts,
+Tuesday AI sharing time and left up async. Static HTML, no build step.
+
+**🌐 Live:** https://q-branch-latam-brain-9942e218be1b.herokuapp.com/ (Heroku, Basic dyno — always on).
+Redeploy after editing `site/`: `git subtree push --prefix site heroku main` from the repo root. Self-contained — all fonts,
 the Salesforce cloud logo, the Q Branch mark, Agent Astro, and sparkles are served from `assets/`.
 
 Visual system follows Thais Midori's Salesforce Brand Assets kit (AvantGarde headlines, Salesforce
