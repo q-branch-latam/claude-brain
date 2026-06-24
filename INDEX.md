@@ -17,6 +17,7 @@ The line here is the *short form*. Each guide's own front-matter `description` i
 - `docs/salesforce-core-gotchas.md` — Cross-cutting Salesforce deploy/runtime gotchas — LWC @wire reactivity & proxy spread, Experience Cloud hex-not-rgb, SDO profile naming, NAME field in layouts, tab-before-permset ordering, Slack-as-channel constraints.
 - `docs/org-and-tooling-reference.md` — Fresh OrgFarm login flow (MFA code via Slack + skip-phone interstitial, persistent profile); devbar auth for statusline cost; sf CLI sandbox/log gotchas (HttpsProxyAgent, EPERM logs).
 - `docs/build-log-pattern.md` — Open when setting up a project's working-memory log: the append-only build-log.md the AI maintains autonomously (Context-Stack Layer 2), the drop-in trigger-rule block, what to log vs skip, and how it differs from /capture and git.
+- `docs/heroku-deploy.md` — Deploying to Heroku from the CLI: app name gets a random hash suffix (real URL ≠ <name>.herokuapp.com); `git subtree push --prefix <dir> heroku main` to deploy a subfolder (Procfile/package.json at the subtree root); tiny Express server.js beats the unmaintained static buildpack; `heroku login` needs an interactive shell.
 
 ## Procedure & config (not lazy-scan guides — read when relevant)
 
